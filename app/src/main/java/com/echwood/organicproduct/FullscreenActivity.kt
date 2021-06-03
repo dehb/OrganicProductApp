@@ -15,8 +15,8 @@ import android.widget.TextView
  * status bar and navigation/system bar) with user interaction.
  */
 class FullscreenActivity : AppCompatActivity() {
-    private lateinit var fullscreenContent: TextView
-    private lateinit var fullscreenContentControls: LinearLayout
+    private lateinit var fullscreenContent: LinearLayout
+//    private lateinit var fullscreenContentControls: LinearLayout
     private val hideHandler = Handler()
 
     @SuppressLint("InlinedApi")
@@ -36,8 +36,8 @@ class FullscreenActivity : AppCompatActivity() {
     }
     private val showPart2Runnable = Runnable {
         // Delayed display of UI elements
-        supportActionBar?.show()
-        fullscreenContentControls.visibility = View.VISIBLE
+//        supportActionBar?.show()
+//        fullscreenContentControls.visibility = View.VISIBLE
     }
     private var isFullscreen: Boolean = false
 
@@ -73,12 +73,12 @@ class FullscreenActivity : AppCompatActivity() {
         fullscreenContent = findViewById(R.id.fullscreen_content)
         fullscreenContent.setOnClickListener { toggle() }
 
-        fullscreenContentControls = findViewById(R.id.fullscreen_content_controls)
+//        fullscreenContentControls = findViewById(R.id.fullscreen_content_controls)
 
         // Upon interacting with UI controls, delay any scheduled hide()
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
-        findViewById<Button>(R.id.dummy_button).setOnTouchListener(delayHideTouchListener)
+//        findViewById<Button>(R.id.dummy_button).setOnTouchListener(delayHideTouchListener)
     }
 
     override fun onPostCreate(savedInstanceState: Bundle?) {
@@ -101,7 +101,7 @@ class FullscreenActivity : AppCompatActivity() {
     private fun hide() {
         // Hide UI first
         supportActionBar?.hide()
-        fullscreenContentControls.visibility = View.GONE
+//        fullscreenContentControls.visibility = View.GONE
         isFullscreen = false
 
         // Schedule a runnable to remove the status and navigation bar after a delay
