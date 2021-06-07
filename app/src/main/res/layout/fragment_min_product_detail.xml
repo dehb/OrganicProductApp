@@ -3,24 +3,303 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/fullscreenBackgroundColor"
+    android:background="@drawable/home_backgrond"
     android:theme="@style/ThemeOverlay.Organicproduct.FullscreenContainer"
     tools:context=".MinProductDetailFragment">
 
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,
          TextureView, etc. -->
-    <TextView
+    <LinearLayout
         android:id="@+id/fullscreen_content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
         android:keepScreenOn="true"
-        android:text="@string/dummy_content"
-        android:textColor="?attr/fullscreenTextColor"
-        android:textSize="50sp"
-        android:textStyle="bold" />
+        android:paddingHorizontal="24dp"
+        android:paddingTop="42dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_background"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/ic_heart_outline"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_background"
+                    android:src="@drawable/ic_basket_outline"/>
+            </LinearLayout>
+        </LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:scrollIndicators="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    >
 
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="250dp"
+                        android:layout_marginTop="24dp"
+                        android:src="@drawable/product"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/purple_background"
+                        android:layout_alignParentBottom="true"
+                        android:paddingHorizontal="24dp"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginVertical="8dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#3E2260"
+                                android:textStyle="bold"
+                                android:paddingTop="8dp"
+                                android:textSize="16dp"
+                                android:text="4.7"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#3E2260"
+                                android:textStyle="bold"
+                                android:paddingTop="8dp"
+                                android:textSize="16dp"
+                                android:gravity="right"
+                                android:text="5 Comments"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/white_background"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="40dp"
+                        android:orientation="vertical">
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:background="@drawable/white_background"
+                            android:layout_height="match_parent">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingHorizontal="8dp"
+                                android:layout_marginTop="20dp"
+                                android:gravity="center_vertical"
+                                >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#3E2260"
+                                    android:textStyle="bold"
+                                    android:textSize="14dp"
+                                    android:layout_marginBottom="6dp"
+                                    android:text="Floral Skin Serum"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#3E2260"
+                                    android:textStyle="normal"
+                                    android:textSize="12dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:text="120ml + 80ml"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#3E2260"
+                                    android:textStyle="bold"
+                                    android:textSize="16dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:text="$147"/>
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="6dp"
+                                android:layout_gravity="center"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/icon_image_background"
+                                android:src="@drawable/ic_heart_outline"/>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primary"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:text="Similar Products"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="16dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="12dp"
+                        android:orientation="vertical"
+                        android:elevation="2dp"
+                        android:background="@drawable/green_product_backg"
+                        >
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/p_imagee"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:background="@drawable/white_background"
+                            android:layout_height="match_parent"
+                            android:padding="12dp"
+                            android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#3E2260"
+                                    android:textStyle="bold"
+                                    android:textSize="14dp"
+                                    android:layout_marginBottom="6dp"
+                                    android:text="Sensitive Skin Serum"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#3E2260"
+                                android:textStyle="normal"
+                                android:textSize="12dp"
+                                android:layout_marginBottom="12dp"
+                                android:text="120ml + 80ml"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#3E2260"
+                                    android:textStyle="bold"
+                                    android:textSize="16dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:text="$147"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/red"
+                                    android:textStyle="bold"
+                                    android:textSize="16dp"
+                                    android:gravity="right"
+
+                                    android:layout_marginBottom="12dp"
+                                    android:text="-30%"/>                </LinearLayout>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="12dp"
+                        android:orientation="vertical"
+                        android:elevation="2dp"
+                        android:background="@drawable/peach_product_backg"
+                        >
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/p_imageee"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:background="@drawable/white_background"
+                            android:layout_height="match_parent"
+                            android:padding="12dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#3E2260"
+                                android:textStyle="bold"
+                                android:textSize="14dp"
+                                android:layout_marginBottom="6dp"
+                                android:text="Oily Skin Serum"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#3E2260"
+                                android:textStyle="normal"
+                                android:textSize="12dp"
+                                android:layout_marginBottom="12dp"
+                                android:text="120ml + 80ml"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#3E2260"
+                                    android:textStyle="bold"
+                                    android:textSize="16dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:text="$147"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/red"
+                                    android:textStyle="bold"
+                                    android:textSize="16dp"
+                                    android:gravity="right"
+                                    android:layout_marginBottom="12dp"
+                                    android:text="-25%"/>                </LinearLayout>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
     <!-- This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows. -->
     <FrameLayout
