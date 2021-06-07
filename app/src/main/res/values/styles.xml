@@ -7,7 +7,7 @@
     <style name="Widget.Theme.Organicproduct.ButtonBar.Fullscreen" parent="">
         <item name="android:background">@color/black_overlay</item>
         <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
-        <item name="statusBarBackground">#EADAFF</item>
+        <item name="statusBarBackground">@color/background</item>
     </style>
 
 </resources>
