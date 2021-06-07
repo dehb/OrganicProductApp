@@ -16,7 +16,7 @@
         android:orientation="vertical"
         android:keepScreenOn="true"
         android:paddingHorizontal="24dp"
-        android:paddingTop="48dp"
+        android:paddingTop="42dp"
         android:id="@+id/fullscreen_content">
 
         <LinearLayout
@@ -55,6 +55,16 @@
                     android:src="@drawable/ic_basket_outline"/>
             </LinearLayout>
         </LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollIndicators="none"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -76,7 +86,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#F1464A"
+                    android:textColor="@color/red"
                     android:textStyle="bold"
                     android:textSize="16dp"
                     android:text="40%"/>
@@ -91,20 +101,20 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#27094B"
+                    android:textColor="@color/primary"
                     android:textStyle="bold"
                     android:textSize="32dp"
                     android:text="Floral"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#27094B"
+                    android:textColor="@color/primary"
                     android:textSize="24dp"
                     android:text="Organic Skin Care"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#27094B"
+                    android:textColor="@color/primary"
                     android:textSize="24dp"
                     android:text="Product"/>
             </LinearLayout>
@@ -118,7 +128,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#27094B"
+                android:textColor="@color/primary"
                 android:textStyle="normal"
                 android:textSize="14dp"
                 android:text="Check All Categories"/>
@@ -145,13 +155,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/icon_image_background"
-                        android:layout_marginRight="8dp"
+                        android:layout_marginRight="10dp"
                         android:src="@drawable/p_iconnn"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Serum"
-                    android:textColor="#27094B"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/primary"
                   />
 
                 </LinearLayout>
@@ -166,13 +178,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/icon_image_background"
-                        android:layout_marginRight="8dp"
+                        android:layout_marginRight="10dp"
                         android:src="@drawable/p_iconn"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Cream"
-                        android:textColor="#27094B"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/primary"
                         />
 
                 </LinearLayout>
@@ -185,13 +199,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/icon_image_background"
-                        android:layout_marginRight="8dp"
+                        android:layout_marginRight="10dp"
                         android:src="@drawable/p_icon"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Clenser"
-                        android:textColor="#27094B"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/primary"
                         />
 
                 </LinearLayout>
@@ -207,7 +223,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#27094B"
+                android:textColor="@color/primary"
                 android:textStyle="bold"
                 android:textSize="18dp"
                 android:text="Featured Products"/>
@@ -215,13 +231,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/fullscreen_content_controls"
-                android:paddingVertical="10dp"
+                android:paddingVertical="16dp"
                 android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
+                    android:layout_marginBottom="16dp"
                     android:background="@drawable/purple_product_backg"
                     >
                     <LinearLayout
@@ -231,9 +248,9 @@
                         android:orientation="vertical"
                         >
                         <ImageView
-                            android:layout_width="120dp"
-                            android:layout_height="120dp"
-                            android:src="@drawable/product"/>
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/p_image"/>
                     </LinearLayout>
                     <RelativeLayout
                         android:layout_width="wrap_content"
@@ -243,7 +260,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:padding="8dp"
+                            android:paddingHorizontal="8dp"
+                            android:layout_marginTop="26dp"
                             android:gravity="center_vertical"
                             >
                             <TextView
@@ -252,9 +270,127 @@
                                 android:textColor="#3E2260"
                                 android:textStyle="bold"
                                 android:textSize="14dp"
-
-                                android:layout_marginBottom="12dp"
+                                android:layout_marginBottom="6dp"
                                 android:text="Floral Skin Serum"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#3E2260"
+                                android:textStyle="normal"
+                                android:textSize="12dp"
+                                android:layout_marginBottom="12dp"
+                                android:text="Apply on freshly cleansed skin"/>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="6dp"
+                            android:layout_gravity="center"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/icon_image_background"
+                        android:src="@drawable/ic_heart_outline"/>
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/green_product_backg"
+                    >
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:orientation="vertical"
+                        >
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/p_imagee"/>
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:background="@drawable/white_background"
+                        android:layout_height="match_parent">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="6dp"
+                            android:layout_marginTop="26dp"
+                            android:gravity="center_vertical"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#3E2260"
+                                android:textStyle="bold"
+                                android:textSize="14dp"
+                                android:layout_marginBottom="6dp"
+                                android:text="Sensitive Skin Serum"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#3E2260"
+                                android:textStyle="normal"
+                                android:textSize="12dp"
+                                android:layout_marginBottom="12dp"
+                                android:text="Gently massage into your face"/>
+                        </LinearLayout>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/icon_image_background"
+                            android:layout_marginRight="8dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_heart_outline"/>
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/peach_product_backg"
+                    >
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:orientation="vertical"
+                        >
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/p_imageee"/>
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:background="@drawable/white_background"
+                        android:layout_height="match_parent">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="26dp"
+                            android:paddingHorizontal="8dp"
+                            android:gravity="center_vertical"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#3E2260"
+                                android:textStyle="bold"
+                                android:textSize="14dp"
+                                android:layout_marginBottom="6dp"
+                                android:text="Oily Skin Serum"/>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -267,19 +403,19 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/white_background"
-                            android:layout_marginRight="8dp"
+                            android:background="@drawable/icon_image_background"
+                            android:layout_marginRight="6dp"
                             android:layout_alignParentRight="true"
                             android:src="@drawable/ic_heart_outline"/>
                     </RelativeLayout>
-
-
                 </LinearLayout>
             </LinearLayout>
 
 
 
         </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 
 
