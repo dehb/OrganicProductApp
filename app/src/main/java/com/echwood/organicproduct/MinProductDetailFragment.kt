@@ -62,7 +62,14 @@ class MinProductDetailFragment : Fragment() {
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_min_product_detail, container, false)
+        var root = inflater.inflate(R.layout.fragment_min_product_detail, container, false)
+
+//        requireActivity().supportFragmentManager.beginTransaction()
+//            .replace(R.id.signup_page, AccountSettingUpFragment())
+//            .addToBackStack(null)
+//            .commit()
+
+        return root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
