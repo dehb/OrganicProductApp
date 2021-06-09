@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.Button
+import android.widget.RelativeLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 
@@ -64,10 +65,14 @@ class MinProductDetailFragment : Fragment() {
     ): View? {
         var root = inflater.inflate(R.layout.fragment_min_product_detail, container, false)
 
-//        requireActivity().supportFragmentManager.beginTransaction()
-//            .replace(R.id.signup_page, AccountSettingUpFragment())
-//            .addToBackStack(null)
-//            .commit()
+
+        root.findViewById<RelativeLayout>(R.id.selected_product).setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction()
+                    .replace(R.id.min_main, FullProductDetailFragment())
+                    .addToBackStack(null)
+                    .commit()
+        }
+
 
         return root
     }
