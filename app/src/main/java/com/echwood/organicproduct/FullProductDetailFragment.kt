@@ -53,7 +53,7 @@ class FullProductDetailFragment : Fragment() {
         false
     }
 
-    private var dummyButton: Button? = null
+
     private var fullscreenContent: View? = null
     private var fullscreenContentControls: View? = null
 
@@ -70,7 +70,7 @@ class FullProductDetailFragment : Fragment() {
 
         visible = true
 
-        dummyButton = view.findViewById(R.id.dummy_button)
+
         fullscreenContent = view.findViewById(R.id.fullscreen_content)
         fullscreenContentControls = view.findViewById(R.id.fullscreen_content_controls)
         // Set up the user interaction to manually show or hide the system UI.
@@ -79,7 +79,7 @@ class FullProductDetailFragment : Fragment() {
         // Upon interacting with UI controls, delay any scheduled hide()
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
-        dummyButton?.setOnTouchListener(delayHideTouchListener)
+//        dummyButton?.setOnTouchListener(delayHideTouchListener)
     }
 
     override fun onResume() {
@@ -103,7 +103,7 @@ class FullProductDetailFragment : Fragment() {
 
     override fun onDestroy() {
         super.onDestroy()
-        dummyButton = null
+//        dummyButton = null
         fullscreenContent = null
         fullscreenContentControls = null
     }
