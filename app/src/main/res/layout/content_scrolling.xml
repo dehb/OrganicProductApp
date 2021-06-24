@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".coordFragment"
+    tools:showIn="@layout/fragment_coord">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="snap: It scrolls based on the visibility of the view. If the visibility is more than 50% then the view will show itself and if it is less then it will hide.
+layout_collapseMode
+
+This indicates the type of effect while collapsing the view.
+
+parallax: This is generally used with images to provide a parallax effect. The image will become in
+pin: The view will be pinned to its position. It is generally used with toolbars when you need to keep the toolbar even after collapsing the other views.
+The code for the ScrollBasedActivity.kt will be:
+In this blog, we learned how to use Coordinator Layout in our application. Coordinator Layout is used to manage the transactions and animation of various views present in an Activity. Before Coordinator Layout, Frame Layout was used, but using more than one views in Frame Layout results in overlapping of views over one another. At the end of the blog, we did some examples to have a clear understanding. Hope you enjoyed the blog."
+
+        android:textSize="30sp"/>
+
+</androidx.core.widget.NestedScrollView>

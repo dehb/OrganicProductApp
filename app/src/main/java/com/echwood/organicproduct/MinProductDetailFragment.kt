@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.Button
+import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -66,7 +68,7 @@ class MinProductDetailFragment : Fragment() {
         var root = inflater.inflate(R.layout.fragment_min_product_detail, container, false)
 
 
-        root.findViewById<RelativeLayout>(R.id.selected_product).setOnClickListener {
+        root.findViewById<ImageView>(R.id.image_min).setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction()
                     .replace(R.id.min_main, FullProductDetailFragment())
                     .addToBackStack(null)
@@ -74,6 +76,12 @@ class MinProductDetailFragment : Fragment() {
         }
 
 
+        root.findViewById<LinearLayout>(R.id.to_test).setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction()
+                    .replace(R.id.min_main, coordFragment())
+                    .addToBackStack(null)
+                    .commit()
+        }
         return root
     }
 
